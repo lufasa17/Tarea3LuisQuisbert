@@ -1,0 +1,93 @@
+.contenedor{/*Contenedor padre*/
+    background-color: aqua;
+    padding: 10px;
+    font-size: 23px;
+    text-align: center;
+    display: grid;
+    grid-gap: 10px; /*SEPERACION ENTRE LAS CAJAS DIV*/
+    /*grid-template-columns: 150px 500px 50px 20px ;
+    grid-template-rows: 100px 150px 50px 100px;*/
+    /*grid-template-columns: 33% 33% 34%;
+    grid-template-rows: 20% 30% 50%;
+    height: 300px;*/
+    /*grid-template-columns: 1fr 1fr 5fr 1fr 1fr 1fr 1fr  ;
+    grid-template-rows: 1fr 2fr 3fr;*/
+    /*grid-template-columns: repeat(4, 1fr) 5fr ;
+    grid-template-rows: 2fr 1fr 8fr 2fr;*/
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    grid-template-areas: "   header header header   "
+                            "nav   nav       nav"
+                            "section   section ads"
+                            "footer footer footer";
+}
+
+.contenedor .header{/*grid column o row para ñas cajas hijos*/
+    background-color: bisque;
+    grid-column: header ; /*primero inicio luego final*/
+    
+}
+
+.contenedor .nav{/*grid column o row para ñas cajas hijos*/
+    background-color: yellow;
+    grid-column: nav ; /*primero inicio luego final*/
+    
+}
+.contenedor .section{/*grid column o row para ñas cajas hijos*/
+    background-color: azure;
+    grid-column: section ; /*primero inicio luego final*/
+    grid-gap: 5px;
+    align-self: stretch;
+    display: flex;
+    /*align-items: center;*/
+    
+}
+.contenedor .section .h1{/*grid column o row para ñas cajas hijos*/
+    background-color: rgb(30, 139, 139);
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    border-style: solid ;
+    /*grid-column: 3/4 ; /*primero inicio luego final*/
+    /*grid-row: 3/2;*/
+}
+.contenedor .section .h2{/*grid column o row para ñas cajas hijos*/
+    background-color: rgb(220, 231, 231);
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    border-style: solid;
+    /*padding: 10px;
+    /*grid-column: 3/4 ; /*primero inicio luego final*/
+    /*grid-row: 3/2;*/
+}
+
+.contenedor .ads{/*grid column o row para ñas cajas hijos*/
+    background-color: chartreuse;
+    grid-column: ads ; /*primero inicio luego final*/
+    display: flex;
+    flex-direction: column;
+
+}
+.contenedor .ads .h3 {/*grid column o row para ñas cajas hijos*/
+    background-color: blue;
+    padding: 10px;
+    margin: 25px;
+    height: 100%;
+    border-style: solid;
+    /*grid-column: ads ; /*primero inicio luego final*/
+}
+.contenedor .ads .h4 {/*grid column o row para ñas cajas hijos*/
+    background-color: blue;
+    padding: 10px;
+    margin: 25px;
+    height: 100%;
+    border-style: solid;
+    /*grid-column: ads ; /*primero inicio luego final*/
+
+}
+.contenedor .footer{/*grid column o row para ñas cajas hijos*/
+    background-color: darkorange;
+    grid-column: footer ; /*primero inicio luego final*/
+    
+}
